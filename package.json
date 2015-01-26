@@ -1,6 +1,6 @@
 {
   "name": "sentry-client",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A Sentry client for node.js designed for compatibility.",
   "main": "./lib/",
   "scripts": {
