@@ -2,16 +2,23 @@
   "name": "sentry-client",
   "version": "1.0.0",
   "description": "A Sentry client for node.js designed for compatibility.",
-  "main": "./lib/",
-  "scripts": {
-    "style": "./node_modules/.bin/crispy ./lib/ ./test/",
-    "test": "npm run style && ./node_modules/.bin/mocha --reporter spec -r should --grep ''"
-  },
+  "keywords": [
+    "sentry",
+    "client",
+    "raven",
+    "error",
+    "logging"
+  ],
   "repository": {
     "type": "git",
     "url": "http://github.com/christophercliff/sentry-client"
   },
   "license": "MIT",
+  "main": "./lib/",
+  "scripts": {
+    "style": "./node_modules/.bin/crispy ./lib/ ./test/",
+    "test": "npm run style && ./node_modules/.bin/mocha --reporter spec -r should --grep ''"
+  },
   "dependencies": {
     "bluebird": "^2.8.2",
     "boom": "^2.6.1",

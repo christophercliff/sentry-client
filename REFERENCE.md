@@ -3,7 +3,7 @@
 - [`Client.create(options)`](#clientcreateoptions)
 - [`client` methods](#client-methods)
     - [`client.sendError(error[, options][, callback])`](#clientsenderrorerror-options-callback)
-    - [`client.sendMessage(error[, options][, callback])`](#clientsendmessagemessage-options-callback)
+    - [`client.sendMessage(message[, options][, callback])`](#clientsendmessagemessage-options-callback)
 
 ## `Client.create(options)`
 
@@ -15,18 +15,20 @@ var client = Client.create(options)
 
 #### `options`
 
-- **`DSN`** `String`
+- **`dsn`** `String`
 
     The Sentry DSN. *Required*.
 
-## `client` methods
+## `Client` Instance Methods
 
 All methods return promises and accept an optional callback function.
 
 ```js
-client.sendError(err).then(function (data) {}, function (err) {})
+client.sendError(new Error('Oops!')).then(function (data) {}, function (err) {})
+
 // or
-client.sendError(err, function (err, data) {})
+
+client.sendError(new Error('Oops!'), function (err, data) {})
 ```
 
 ### `client.sendError(error[, options][, callback])`

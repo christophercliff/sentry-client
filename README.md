@@ -13,7 +13,11 @@ npm install sentry-client
 ```js
 var client = require('sentry-client').create({ dsn: YOUR_DSN })
 
-client.sendError(new Error('Just an error')).then(done)
+client.sendError(new Error('Oops!')).then(function (data) {}, function (err) {})
+
+// or
+
+client.sendError(new Error('Oops!'), function (err, data) {})
 ```
 
 ## API
