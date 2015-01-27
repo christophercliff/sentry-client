@@ -1,7 +1,7 @@
 # v1.0.x API Reference
 
 - [`Client.create(options)`](#clientcreateoptions)
-- [`client` methods](#client-methods)
+- [`Client` Instance Methods](#client-instance-methods)
     - [`client.sendError(error[, options][, callback])`](#clientsenderrorerror-options-callback)
     - [`client.sendMessage(message[, options][, callback])`](#clientsendmessagemessage-options-callback)
 
