@@ -1,7 +1,6 @@
 var _ = require('lodash')
 var Client = require('../')
 var dotenv = require('dotenv')
-var pkg = require('../package.json')
 
 dotenv.load()
 
@@ -15,8 +14,7 @@ describe('Client.create()', function () {
 
     it('should create the client', function () {
         var client = Client.create({ dsn: 'https://a:b@example.com/1' })
-        client.auth.should.equal('Sentry sentry_version=5, sentry_key=a, sentry_secret=b, sentry_client=sentry-client/' + pkg.version)
-        client.uri.should.equal('https://example.com/api/1/store/')
+        client.should.be.instanceof(Client)
     })
 
 })
