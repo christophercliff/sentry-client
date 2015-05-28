@@ -1,6 +1,6 @@
 # sentry-client
 
-A [Sentry](https://getsentry.com/) client for node.js designed for compatibility.
+The smallest [Sentry](https://getsentry.com/) client for node.js.
 
 ## Installation
 
@@ -14,9 +14,7 @@ npm install sentry-client
 var client = require('sentry-client').create({ dsn: YOUR_DSN })
 
 client.sendError(new Error('Oops!')).then(function (data) {}, function (err) {})
-
 // or
-
 client.sendError(new Error('Oops!'), function (err, data) {})
 ```
 

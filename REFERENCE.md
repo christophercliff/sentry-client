@@ -25,9 +25,7 @@ All methods return promises and accept an optional callback function.
 
 ```js
 client.sendError(new Error('Oops!')).then(function (data) {}, function (err) {})
-
 // or
-
 client.sendError(new Error('Oops!'), function (err, data) {})
 ```
 
